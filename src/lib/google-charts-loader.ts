@@ -23,9 +23,9 @@ const loadedPackages = new Map();
 
 export function getChartsLoader(): Promise<GoogleChartLoader> {
   // If already included in the page:
-  if (window.google !== undefined) {
-    return Promise.resolve(window.google.charts);
-  }
+  //if (window.google !== undefined) {
+  //  return Promise.resolve(window.google.charts);
+  //}
 
   if (chartsLoaderPromise === null) {
     chartsLoaderPromise = new Promise(resolve => {
@@ -46,9 +46,9 @@ export function getChartsLoader(): Promise<GoogleChartLoader> {
       }
 
       script.onload = () => {
-        if (window.google !== undefined) {
-          resolve(window.google.charts);
-        }
+        //if (window.google !== undefined) {
+        //  resolve(window.google.charts);
+        //}
       };
     });
   }
