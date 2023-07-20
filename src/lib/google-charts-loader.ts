@@ -46,9 +46,9 @@ export function getChartsLoader(): Promise<GoogleChartLoader> {
       }
 
       script.onload = () => {
-        //if (window.google !== undefined) {
-        //  resolve(window.google.charts);
-        //}
+        if (window.google !== undefined) {
+          resolve(window.google.charts);
+        }
       };
     });
   }
